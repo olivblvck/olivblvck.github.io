@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f4ef; 
+            color: #333; 
+        }
+
+        header {
+            background-color: #6d493b; 
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d1b3a3;
+            transform: scale(1.1);
+        }
+
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-2px);
+        }
+
+        h1 {
+            color: #6d493b;  
+            font-size: 36px;
+            letter-spacing: 1.5px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #6d493b;  
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #6d493b; 
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .project {
+            background: #f9f4ef; 
+            padding: 15px;
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 0.3s ease-in-out;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .project h3 {
+            margin-top: 0;
+            color: #6d493b; 
+        }
+
+        .project a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #6d493b; 
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        a {
+            color: #6d493b; 
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #6d493b;
+        }
+
+        /* Stylizacja dla obrazków */
+        .image-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsywność */
+        @media (max-width: 600px) {
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project {
+                width: 100%; /* W pełnej szerokości na małych ekranach */
+                max-width: 300px; /* Maksymalna szerokość */
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">O mnie</a></li>
+                <li><a href="#projects">Projekty</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h1>Witaj na moim portfolio!</h1>
+        <p>Nazywam się Oliwia Witkowska i studiuję informatykę od 2021 roku. Na tej stronie możesz zobaczyć niektóre z moich projektów, nad którymi pracowałam.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Moje Projekty</h2>
+        <div class="projects">
+            <a href="2048.html" class="project">
+                <h3>Gra 2048</h3>
+                <p>Konsolowa implementacja gry w C++</p>
+            </a>
+            <a href="plagiarismdetector.html" class="project">
+                <h3>Plagiarism Detector</h3>
+                <p>Projekt zespołowy</p>
+            </a>
+            <a href="wisielec.html" class="project">
+                <h3>Wisielec</h3>
+                <p>Konsolowa implementacja gry w C++</p>
+            </a>
+            <a href="virtualbox.html" class="project">
+                <h3>VirtualBox i Ubuntu Server</h3>
+                <p>Obszerna instrukcja dla Oracle VM VirtualBox 7.0. i Ubuntu Server 22.04.3 LTS </p>
+            </a>
+            <a href="cps.html" class="project">
+                <h3>Cyfrowe przetwarzanie sygnałów</h3>
+                <p>Rozwiązanie zadań z laboratoriów w Pythonie</p>
+            </a>
+            <a href="grafika.html" class="project">
+                <h3>Grafika komputerowa</h3>
+                <p>Animacje utworzone w PovRay oraz Blender</p>
+            </a>
+            <a href="bd.html" class="project">
+                <h3>Bazy danych</h3>
+                <p>Baza danych salonu fryzjerskiego stworzona przy użyciu SQL</p>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Jeśli chcesz się ze mną skontaktować, napisz na <a href="mailto:witkowska.oliwia@vp.pl">witkowska.oliwia@vp.pl</a> lub znajdź mnie na <a href="https://linkedin.com/in/witkowska-oliwia">LinkedIn</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Oliwia Witkowska. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>
