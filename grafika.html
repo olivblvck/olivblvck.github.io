@@ -7,15 +7,15 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
         body {
-            font-family: 'Poppins', sans-serif; /* Czcionka Poppins Light */
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f9f4ef; /* Białe tło */
-            color: #333; /* Domyślny kolor tekstu */
+            background-color: #f9f4ef;
+            color: #333;
         }
         header {
-            background-color: #6d493b; /* Ciemny kolor z CV */
+            background-color: #6d493b;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -37,113 +37,41 @@
             max-width: 900px;
             margin: 20px auto;
             padding: 20px;
-            background: #fff; /* Delikatne beżowe tło */
+            background: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            color: #6d493b; /* Kolor z CV */
-            font-size: 28px;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        h2 {
-            color: #6d493b; /* Kolor z CV */
-            text-align: center;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        h3 {
-            color: #6d493b; /* Kolor z CV */
-            font-size: 22px;
-            margin-top: 30px;
-            margin-bottom: 10px;
+        h1, h2, h3 {
+            color: #6d493b;
+            margin: 40px 0 15px;
         }
         p {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 20px;
         }
-        .code {
-            font-family: Consolas, "Courier New", monospace;
-            background-color: #ffffff;
-            padding: 2px 4px;
-            color: #6d493b; /* Kolor ciemny z CV */
-        }
         .project-content {
             text-align: center;
+        }
+        .project-content iframe {
+            width: 80%; 
+            height: auto;
+            aspect-ratio: 534 / 400; 
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: #6d493b; /* Kolor stopki */
+            background: #6d493b; 
             color: #fff;
             position: relative;
             bottom: 0;
             width: 100%;
+            z-index: 10;
+            box-sizing: border-box; 
         }
-        .iframe-video {
-            width: 560px;
-            height: 315px;
-            margin: 20px 0;
-        }
-        .iframe-pdf {
-            width: 560px;
-            height: 790px;
-            margin: 20px 0;
-        }
-        .content-wrapper {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        figure {
-            margin: 20px 0;
-            text-align: center;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        figcaption {
-            font-size: 16px;
-            color: #666;
-            margin-top: 5px;
-        }
-        a {
-            color: #6d493b; /* Kolor linków zgodny z CV */
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-        /* Responsywność */
         @media (max-width: 600px) {
-            .projects {
-                flex-direction: column;
-                align-items: center;
-            }
-            .project {
-                width: 100%; /* W pełnej szerokości na małych ekranach */
-                max-width: 300px; /* Maksymalna szerokość */
-            }
+        .project-content iframe {
+            aspect-ratio: 534 / 400; 
         }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
     </style>
 </head>
@@ -158,31 +86,17 @@
 
     <section id="project">
         <h1>Grafika komputerowa - Animacje utworzone w PovRay oraz Blender</h1>
-        
-        <p>Zadaniem było stworzenie animacji na dowolny temat w PovRay, a następnie możliwie jak najdokładniejsze odwzorowanie tej animacji w Blenderze. Praca ta miała na celu naukę tworzenia animacji w dwóch zupełnie różnych programach i zrozumienie ich różnic. </p>
-        
-        <h2> Animacja w Blender: </h2>
-        <div style="text-align: center;">
-            <iframe src="https://drive.google.com/file/d/1osqdl_c-2bh1rAJi91l0RXxaV9V1VHP5/preview" width="534" height="400"allow="autoplay"></iframe>
+        <p>Zadaniem było stworzenie animacji na dowolny temat w PovRay, a następnie możliwie jak najdokładniejsze odwzorowanie tej animacji w Blenderze. Praca ta miała na celu naukę tworzenia animacji w dwóch zupełnie różnych programach i zrozumienie ich różnic.</p>
+        <div class="project-content">
+            <h2>Animacja w PovRay:</h2>
+            <img src="grafika/android_blender.gif" alt="Animacja w PovRay" style="width: 100%; height: auto;">
+            <h2>Animacja w Blender:</h2>
+            <img src="grafika/android_povray.gif" alt="Animacja w Blender" style="width: 100%; height: auto;">
         </div>
-
-        <h2> Animacja w PovRay: </h2>
-        <div style="text-align: center;">
-            <iframe src="https://drive.google.com/file/d/1N4c8y-x3ZaBtNrR4OJW7d1E7wZnYUZre/preview" width="534" height="400" allow="autoplay"></iframe>
-        </div>
-
         <script src="https://gist.github.com/olivblvck/d3728f17b1c63074095a9bcbebbdee8c.js"></script>
-
-        
-
-
-
-        
     </section>
 
     <footer>
         <p>&copy; 2024 Oliwia Witkowska. Wszystkie prawa zastrzeżone.</p>
     </footer>
-
 </body>
-</html>
