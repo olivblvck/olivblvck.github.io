@@ -92,16 +92,20 @@
             width: 100%;
         }
         
+        .iframe-video, .iframe-pdf {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
         .iframe-video {
-            width: 560px;
             height: 315px;
-            margin: 20px 0;
         }
+
         .iframe-pdf {
-            width: 560px;
             height: 790px;
-            margin: 20px 0;
         }
+
         .content-wrapper {
             max-width: 900px;
             margin: 20px auto;
@@ -132,6 +136,43 @@
         }
         a:hover {
             border-bottom: 1px solid #6d493b; /* Efekt podkreślenia */
+        }
+
+        /* Responsywność */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .iframe-video {
+                height: 280px;
+            }
+
+            .iframe-pdf {
+                height: 600px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .iframe-video {
+                height: 240px;
+            }
+
+            .iframe-pdf {
+                height: 500px;
+            }
         }
     </style>
 </head>
