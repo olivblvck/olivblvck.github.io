@@ -6,7 +6,9 @@
     <title>Moje Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
+        /* * {
+            box-shadow: 0 0 0 1px red;
+        } */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -52,7 +54,7 @@
 
         section {
             max-width: 900px;
-            margin: 20px auto;
+            margin: 30px auto;
             padding: 20px;
             background: #fff; 
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -96,7 +98,7 @@
         .project {
             background: #f9f4ef; 
             padding: 15px;
-            margin: 10px;
+            margin: 20px 10px;
             width: 250px;
             text-align: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -129,6 +131,8 @@
             position: relative;
             bottom: 0;
             width: 100%;
+            z-index: 10;
+            box-sizing: border-box; 
         }
 
         a {
@@ -137,24 +141,19 @@
             border-bottom: 1px solid transparent;
             transition: border-color 0.3s;
         }
-
         a:hover {
             border-bottom: 1px solid #6d493b;
         }
-
-        /* Stylizacja dla obrazków */
         .image-section {
             text-align: center;
-            margin: 10px 0; /* Zmniejszony margines */
+            margin: 10px 0;  
         }
-
         .image-section img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
         /* Responsywność */
         @media (max-width: 600px) {
             .projects {
@@ -162,19 +161,17 @@
                 align-items: center;
             }
             .project {
-                width: 100%; /* W pełnej szerokości na małych ekranach */
-                max-width: 300px; /* Maksymalna szerokość */
-                margin: 5px 0; /* Zmniejszone marginesy */
-                padding: 10px; /* Zmniejszony padding */
+                width: 100%; 
+                max-width: 300px;
+                margin: 15px 5px; 
+                padding: 10px; 
             }
-
             header, nav ul li {
-                padding: 10px 0; /* Zmniejszony padding w nagłówku i nawigacji */
+                padding: 10px 0; 
             }
-
             section {
-                padding: 10px; /* Zmniejszony padding w sekcjach */
-                margin: 10px auto; /* Zmniejszony margines w sekcjach */
+                padding: 10px; 
+                margin: 10px auto; 
             }
         }
 
@@ -188,6 +185,7 @@
                 transform: translateY(0);
            }
         }
+
     </style>
 </head>
 <body>
