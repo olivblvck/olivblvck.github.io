@@ -52,10 +52,17 @@
         .project-content {
             text-align: center;
         }
-        .project-content iframe {
-            width: 80%; 
+        .project-content img {
+            max-width: 534px;
+            max-height: 400px;
+            width: auto;
             height: auto;
-            aspect-ratio: 534 / 400; 
+            display: block;
+            margin: 0 auto;
+            aspect-ratio: 534 / 400;
+        }
+        .gist .blob-code-inner {
+            font-size: 14px !important; 
         }
         footer {
             text-align: center;
@@ -69,7 +76,8 @@
             box-sizing: border-box; 
         }
         @media (max-width: 600px) {
-        .project-content iframe {
+        .project-content img {
+            max-width: 90%;
             aspect-ratio: 534 / 400; 
         }
         }
@@ -93,7 +101,7 @@
             <h2>Animacja w Blender:</h2>
             <img src="grafika/android_povray.gif" alt="Animacja w Blender" style="width: 100%; height: auto;">
         </div>
-        <script src="https://gist.github.com/olivblvck/d3728f17b1c63074095a9bcbebbdee8c.js"></script>
+        <script src="https://gist.github.com/olivblvck/d3728f17b1c63074095a9bcbebbdee8c.js" ></script>
     </section>
 
     <footer>
