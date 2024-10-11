@@ -15,7 +15,7 @@
             color: #333; /* Domyślny kolor tekstu */
         }
         header {
-            background-color: #6d493b; 
+            background-color: #6d493b;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -43,12 +43,12 @@
             max-width: 900px;
             margin: 20px auto;
             padding: 20px;
-            background: #fff; 
+            background: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
         h1 {
-            color: #6d493b;  
+            color: #6d493b;
             font-size: 28px;
             margin-top: 40px;
             margin-bottom: 15px;
@@ -56,14 +56,14 @@
         }
 
         h2 {
-            color: #6d493b; 
+            color: #6d493b;
             text-align: center;
             margin-bottom: 20px;
             text-align: left;
         }
 
         h3 {
-            color: #6d493b;  
+            color: #6d493b;
             font-size: 22px;
             margin-top: 30px;
             margin-bottom: 10px;
@@ -77,7 +77,7 @@
             font-family: Consolas, "Courier New", monospace;
             background-color: #ffffff;
             padding: 2px 4px;
-            color: #6d493b;  
+            color: #6d493b;
         }
         .project-content {
             text-align: center;
@@ -91,7 +91,7 @@
             bottom: 0;
             width: 100%;
         }
-        
+
         .iframe-video {
             width: 560px;
             height: 315px;
@@ -158,50 +158,50 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Strona Główna</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <section id="project">
-        <h1>Cyfrowe Przetwarzanie Sygnałów - Programy do analizy dźwięku w języku Python</h1>
-        <p>Celem zajęć jest napisanie programów do analizy dźwięku w języku Python. Poniżej znajduje się opis programów, wideo prezentujące ich działanie oraz kody źródłowe. </p>
+<section id="project">
+    <h1>Cyfrowe Przetwarzanie Sygnałów - Programy do analizy dźwięku w języku Python</h1>
+    <p>Celem zajęć jest napisanie programów do analizy dźwięku w języku Python. Poniżej znajduje się opis programów, wideo prezentujące ich działanie oraz kody źródłowe. </p>
 
-        <h3> Rozpoznawanie nut </h3>
-        <p>Program, który umożliwia analizę dźwięku i samodzielnie rozpoznaje wybrane tony zgodnie z postawionym zadaniem. Wczytany dźwięk powinien reprezentować jedną nutę, która jest rozpoznawana i wskazywana w tabeli nutowej. Program nie stosuje dokładnego porównania, tylko wskazuje nuty o częstotliwościach najbliższych pozyskanym. </p>
-        
-        <div class="project-content">
-            <iframe class="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/631OItFTg1k?si=Oe0f_c_34Ir8bNNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-            <script src="https://gist.github.com/olivblvck/8feb67cc41e14975a82ee16f54346b00.js"></script>
-        </div>
+    <h3> Rozpoznawanie nut </h3>
+    <p>Program, który umożliwia analizę dźwięku i samodzielnie rozpoznaje wybrane tony zgodnie z postawionym zadaniem. Wczytany dźwięk powinien reprezentować jedną nutę, która jest rozpoznawana i wskazywana w tabeli nutowej. Program nie stosuje dokładnego porównania, tylko wskazuje nuty o częstotliwościach najbliższych pozyskanym. </p>
 
-        <h3>Analiza dźwięków DTMF</h3>
-        <p>Program wskazujący, który przycisk domofonu został naciśnięty na podstawie analizy wydawanego przez niego dźwięku. Rozpoznawanie pojedynczego klawisza, którego wciśnięcie zostało nagrane. Rozpoznawanie sekwencji klawiszy na podstawie nagrania. </p>
+    <div class="project-content">
+        <iframe class="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/631OItFTg1k?si=Oe0f_c_34Ir8bNNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <div class="project-content">
-            <iframe class="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/kBLtSvVp_sE?si=lhVg2pXIN5L43qSN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <script src="https://gist.github.com/olivblvck/8feb67cc41e14975a82ee16f54346b00.js"></script>
+    </div>
 
-            <script src="https://gist.github.com/olivblvck/b676215bc31c9603483ad6fffd84e408.js"></script>
-        </div>
+    <h3>Analiza dźwięków DTMF</h3>
+    <p>Program wskazujący, który przycisk domofonu został naciśnięty na podstawie analizy wydawanego przez niego dźwięku. Rozpoznawanie pojedynczego klawisza, którego wciśnięcie zostało nagrane. Rozpoznawanie sekwencji klawiszy na podstawie nagrania. </p>
 
-        <h3>Analiza spektralna dźwięku</h3>
-        <p>Program, który umożliwia przeprowadzenie analizy spektralnej wczytanego dźwięku. Umożliwienie modyfikacji podstawowych cech zmieniających rozdzielczość wygenerowanego spektrogramu. Umożliwienie analizy sygnału z pomocą różnych funkcji okna. Możliwość nałożenia odpowiednich filtrów na analizowany sygnał.</p>
-        <div class="project-content">
-            <iframe class="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/N2fuhC9sXiE?si=YXGgcJ0pviIDabZN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="project-content">
+        <iframe class="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/kBLtSvVp_sE?si=lhVg2pXIN5L43qSN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-            <script src="https://gist.github.com/olivblvck/d4b603879bff636525073c855d0e662b.js"></script>
-        </div>
+        <script src="https://gist.github.com/olivblvck/b676215bc31c9603483ad6fffd84e408.js"></script>
+    </div>
+
+    <h3>Analiza spektralna dźwięku</h3>
+    <p>Program, który umożliwia przeprowadzenie analizy spektralnej wczytanego dźwięku. Umożliwienie modyfikacji podstawowych cech zmieniających rozdzielczość wygenerowanego spektrogramu. Umożliwienie analizy sygnału z pomocą różnych funkcji okna. Możliwość nałożenia odpowiednich filtrów na analizowany sygnał.</p>
+    <div class="project-content">
+        <iframe class="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/N2fuhC9sXiE?si=YXGgcJ0pviIDabZN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <script src="https://gist.github.com/olivblvck/d4b603879bff636525073c855d0e662b.js"></script>
+    </div>
 
 
-    </section>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Oliwia Witkowska. Wszystkie prawa zastrzeżone.</p>
-    </footer>
+<footer>
+    <p>&copy; 2024 Oliwia Witkowska. Wszystkie prawa zastrzeżone.</p>
+</footer>
 
 </body>
 </html>
