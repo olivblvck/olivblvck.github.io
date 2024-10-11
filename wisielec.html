@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt 2048</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif; /* Czcionka Poppins Light */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f4ef;
+            color: #333; /* Domyślny kolor tekstu */
+        }
+        header {
+            background-color: #6d493b;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #d1b3a3;
+        }
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #6d493b;
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        h2 {
+            color: #6d493b;
+            text-align: center;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        h3 {
+            color: #6d493b;
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .code {
+            font-family: Consolas, "Courier New", monospace;
+            background-color: #ffffff;
+            padding: 2px 4px;
+            color: #6d493b;
+        }
+        .project-content {
+            text-align: center;
+        }
+        .gist .blob-code-inner {
+            font-size: 12px !important;
+        }
+        div.highlight.highlight-source-shell{font-size: 12px;}
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #6d493b;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+            box-sizing: border-box;
+        }
+        .iframe-video {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            aspect-ratio: 1700 / 1000;
+            margin: 20px 0;
+        }
+        .content-wrapper {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        figcaption {
+            font-size: 16px;
+            color: #666;
+            margin-top: 5px;
+        }
+        a {
+            color: #6d493b;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+        a:hover {
+            border-bottom: 1px solid #6d493b;
+        }
+        /* Responsywność */
+        @media (max-width: 600px) {
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="project">
+    <h1>Projekt: Wisielec - konsolowa implementacja gry w C++</h1>
+    <div class="project-content">
+        <p>Oto projekt gry "Wisielec", który zrealizowałam w ramach zadania semestralnego z programowania obiektowego w C++. Poniżej znajduje się wideo prezentujące działanie gry, skrócona dokumentacja projektu oraz kod programu.</p>
+        <iframe class="iframe-video" src="https://www.youtube.com/embed/NopioJGppI0?si=GY9dg7ia8dryR435" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="content-wrapper">
+        <h1>Manual</h1>
+        <h2>Zadanie, które program ma realizować</h2>
+        <p>Program "Wisielec" to gra polegająca na odgadywaniu słów. Celem gry jest odgadnięcie słowa przed wyczerpaniem limitu siedmiu prób. Program oferuje trzy tryby gry: gra jednoosobowa, gra dla dwóch graczy i gra z komputerem. </p>
+
+        <h1>Lista opcji do wyboru z krótkim opisem każdej z nich</h1>
+        <p> W Menu gry, do wyboru jest 6 opcji:</p>
+        <p>     1.	<code class="code">Wyświetl instrukcje i zasady gry</code> – program wyświetla w konsoli instrukcje i zasady gry.</p>
+        <p>     2.	<code class="code">Gra jednoosobowa</code> – program uruchamia nową grę w trybie dla jednego gracza.</p>
+        <p>     3.	<code class="code">Gra dla dwóch graczy</code> - program uruchamia nową grę w trybie dla dwóch graczy.</p>
+        <p>     4.	<code class="code">Gra z komputerem</code> - program uruchamia nową grę w trybie gry z komputerem.</p>
+        <p>     5.	<code class="code">Wyświetl wyniki graczy</code> – program wyświetla w konsoli wyniki graczy.</p>
+        <p>     6.	<code class="code">Zakończ działanie programu</code> – kończenie pracy programu.</p>
+        <p> Numer opcji odpowiada numerowi, jaki użytkownik musi wprowadzić, by wywołać daną czynność.   W przypadku wprowadzenia litery bądź znaku specjalnego, program wyświetla komunikat o błędnych danych i umożliwia ponowne ich wprowadzenie. W przypadku wprowadzenia liczby spoza zakresu   1-6, program będzie oczekiwał na ponowne wprowadzenie poprawnych danych. </p>
+        <p>Nick gracza może składać się wyłącznie z małych liter. W przypadku wprowadzenia znaku, który nie jest literą (bądź jest polskim znakiem), program prosi o ponowne wprowadzenie poprawnych danych. W przypadku wprowadzenia nazwy z dużymi literami, program sam zamienia litery na małe. Ta kontrola danych dotyczy również słowa do odgadnięcia wprowadzanego przez gracza w trybie gry dla dwóch graczy i z komputerem.</p>
+        <p>Gracz nie jest w stanie nadpisać wyniku Komputera w rankingu wyników. Wynika to z faktu, iż nick „Komputer” jest zawsze pisany z dużej litery, a gracz nie jest w stanie wprowadzić dużych liter w nicku. Nick „komputer” (pisany z małej litery) będzie traktowany jako kolejny gracz w tablicy wyników.</p>
+        <p>Zgadywana litera musi być pojedynczą literą, nie może być polskim znakiem, znakiem specjalnym bądź cyfrą. W przypadku wprowadzenia błędnych danych program informuje o tym i oczekuje na wprowadzenie poprawnych danych. W przypadku wprowadzenia dużej litery, program zamienia ją na małą. W przypadku ponownego wprowadzenia użytej już wcześniej litery, program wyświetla krótki komunikat. Za taki ruch nie jest zmniejszana ilość prób. Gracz zgaduje literę dopóki zgadnie słowo lub wyczerpie ilość możliwych prób.</p>
+        <p>Po pojedynczej turze gry, wyniki zostają zaktualizowane. Gracz ma możliwość zobaczenia wyników wybierając w Menu opcję nr. 5.</p>
+
+        <h2>Nietypowe zachowania programu</h2>
+        <p>Przyznawanie punktów graczom wygląda następująco: 0 punktów, jeśli gracz nie zgadł słowa i 1 punkt, gdy gracz zgadł słowo, niezależnie od ilości wykorzystanych prób. Ponadto gra została rozszerzona o różne tryby w tym o tryb gry z komputerem, gdzie to komputer zgaduje wprowadzone przez gracza słowo. </p>
+
+        <h2>Niezgodności z założeniami przekazanymi w treści zadania </h2>
+        <p>Brak.</p>
+
+        <h1>Składnia danych wejściowych i wyjściowych </h1>
+
+        <h2>Struktura plików, typy danych przechowywane w poszczególnych polach pliku</h2>
+        <p>Plik o nazwie <code class="code">instrukcja.txt</code> zawiera instrukcje i zasady gry, które użytkownik może wyświetlić w konsoli wybierając odpowiednią opcję.</p>
+        <p>Plik o nazwie <code class="code">slowa.txt</code> w każdym kolejnym wierszu zawiera jedno słowo. Słowa są wczytywane podczas gry i w zależności od trybu, program losuje słowo do odgadnięcia.</p>
+        <p>Plik o nazwie <code class="code">wyniki.txt</code> zawiera wyniki graczy. W każdym wierszu jest nick gracza i zdobyte dotychczas przez niego punkty. Program po rundzie gry aktualizuje plik o zdobyte punkty.</p>
+        <p>Plik o nazwie <code class="code">log.txt</code> zawiera informacje o wykonanej interakcji wraz z dokładną datą.</p>
+
+        <h2>Struktura katalogów niezbędna dla poprawnego działania programu</h2>
+        <p>Plik <code class="code">main.cpp</code> jako główny plik kodu źródłowego</p>
+        <p>Pliki źródłowe i pliki nagłówkowe: <code class="code">klasy.cpp</code>, <code class="code">funkcje.cpp</code>, <code class="code">kolory.cpp</code>, <code class="code">klasy.h</code>, <code class="code">funkcje.h</code>, <code class="code">funkcje.h</code>.</p>
+        <p>Pliki tekstowe: <code class="code">instrukcja.txt</code>, <code class="code">slowa.txt</code>, <code class="code">wyniki.txt</code>, <code class="code">log.txt</code>.</p>
+
+        <h1>Opis kodu</h1>
+        <h2>Lista plików z kodem źródłowym wchodzących w skład programu</h2>
+        <p>Plik <code class="code">main.cpp</code> – główny plik kodu źródłowego, zawierający funkcję <code class="code">main()</code>  i logikę wyboru trybu gry oraz zapisy logów.</p>
+        <p>Plik <code class="code">klasy.h</code> – plik nagłówkowy zawierający deklarację klasy bazowej <code class="code">Wisielec</code> i klas po niej dziedziczących: <code class="code">GraJednoosobowa</code>, <code class="code">GraDwuosobowa</code>,<code class="code">GraZKomputerem</code>.</p>
+        <p>Plik <code class="code">klasy.cpp</code> – plik źródłowy zawierający implementacje metod klas: <code class="code">Wisielec</code>, <code class="code">GraJednoosobowa</code>, <code class="code">GraDwuosobowa</code>,<code class="code">GraZKomputerem</code>.</p>
+        <p>Plik <code class="code">funkcje.h</code> – plik nagłówkowy zawierający deklaracje funkcji pomocniczych m.in. do wyświetlania menu, wyników i instrukcji, obsługi wprowadzanych danych od użytkownika oraz sprawdzania aktualnej godziny.</p>
+        <p>Plik <code class="code">funkcje.cpp</code> – plik źródłowy zawierający implementację funkcji pomocniczych.</p>
+        <p>Plik <code class="code">kolory.h</code> – plik nagłówkowy zawierający deklaracje manipulatorów kolorów tekstu.</p>
+        <p>Plik <code class="code">kolory.cpp</code> – plik źródłowy zawierający implementację manipulatorów kolorów tekstu.</p>
+
+
+        <h1>Diagram klas</h1>
+        <img src="diagram_klas.PNG" alt="Diagram klas" style="width:495px;height:410px;" oncontextmenu="return false;">
+    </div>
+    <p><a href="https://gist.github.com/olivblvck/71cbe9dd7c7ee03c0fa1759c21706e10" target="_blank">Kod programu z Gist</a></p>
+    <script src="https://gist.github.com/olivblvck/71cbe9dd7c7ee03c0fa1759c21706e10.js"></script>
+</section>
+
+<footer>
+    <p>&copy; 2024 Oliwia Witkowska. Wszystkie prawa zastrzeżone.</p>
+</footer>
+
+</body>
+</html>
