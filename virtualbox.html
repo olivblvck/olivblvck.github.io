@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrukcja dla maszyny wirtualnej w VirtualBox z systemem Ubuntu Server</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f4ef;
+            color: #333;
+        }
+        header {
+            background-color: #6d493b;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #6d493b;
+            font-size: 28px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        h2 {
+            color: #6d493b;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #6d493b;
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .project-content {
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #6d493b;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .scroll-container {
+            max-width: 560px;
+            max-height: 790px;
+            aspect-ratio: 210 / 297;
+            margin-right: auto;
+            margin-left: auto;
+            /*margin: 20px 0;*/
+            overflow-y: scroll;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /*
+        .scroll-container img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        } */
+
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        figcaption {
+            font-size: 16px;
+            color: #666;
+            margin-top: 5px;
+        }
+        a {
+            color: #6d493b;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Responsywność */
+        @media (max-width: 600px) {
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project {
+                width: 100%;
+                max-width: 300px;
+            }
+            .scroll-container {
+                max-height: 600px;
+                padding: 5px;
+            }
+            .scroll-container img {
+                margin-bottom: 10px;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="project">
+    <h1>Instrukcja dla maszyny wirtualnej w VirtualBox z systemem Ubuntu Server</h1>
+    <p>Celem instrukcji jest przystępne i szczegółowe wprowadzenie użytkownika, który nie ma doświadczenia w wirtualizacji oraz administracji systemami Linux, w proces instalacji środowiska Oracle VM VirtualBox, utworzenia, konfiguracji i zarządzania maszyną wirtualną, instalacji Ubuntu Server na maszynie wirtualnej, a także zarządzanie systemem za pomocą podstawowych komend Linux oraz zaawansowanych narzędzi i konfiguracji. </p>
+    <div class="project-content">
+        <h1>Instrukcja - Podgląd</h1>
+        <div class="scroll-container">
+            <img src="media/vbox/vbox-01.png" alt="Strona 1 raportu">
+            <img src="media/vbox/vbox-02.png" alt="Strona 2 raportu">
+            <img src="media/vbox/vbox-03.png" alt="Strona 3 raportu">
+            <img src="media/vbox/vbox-04.png" alt="Strona 4 raportu">
+            <img src="media/vbox/vbox-05.png" alt="Strona 5 raportu">
+            <img src="media/vbox/vbox-06.png" alt="Strona 6 raportu">
+            <img src="media/vbox/vbox-07.png" alt="Strona 7 raportu">
+            <img src="media/vbox/vbox-08.png" alt="Strona 8 raportu">
+            <img src="media/vbox/vbox-09.png" alt="Strona 9 raportu">
+            <img src="media/vbox/vbox-10.png" alt="Strona 10 raportu">
+            <img src="media/vbox/vbox-11.png" alt="Strona 11 raportu">
+            <img src="media/vbox/vbox-12.png" alt="Strona 12 raportu">
+            <img src="media/vbox/vbox-13.png" alt="Strona 13 raportu">
+            <img src="media/vbox/vbox-14.png" alt="Strona 14 raportu">
+            <img src="media/vbox/vbox-15.png" alt="Strona 15 raportu">
+            <img src="media/vbox/vbox-16.png" alt="Strona 16 raportu">
+            <img src="media/vbox/vbox-17.png" alt="Strona 17 raportu">
+            <img src="media/vbox/vbox-18.png" alt="Strona 18 raportu">
+            <img src="media/vbox/vbox-19.png" alt="Strona 19 raportu">
+            <img src="media/vbox/vbox-20.png" alt="Strona 20 raportu">
+            <img src="media/vbox/vbox-21.png" alt="Strona 21 raportu">
+            <img src="media/vbox/vbox-22.png" alt="Strona 22 raportu">
+            <img src="media/vbox/vbox-23.png" alt="Strona 23 raportu">
+            <img src="media/vbox/vbox-24.png" alt="Strona 24 raportu">
+            <img src="media/vbox/vbox-25.png" alt="Strona 25 raportu">
+            <img src="media/vbox/vbox-26.png" alt="Strona 26 raportu">
+            <img src="media/vbox/vbox-27.png" alt="Strona 27 raportu">
+            <img src="media/vbox/vbox-28.png" alt="Strona 28 raportu">
+            <img src="media/vbox/vbox-29.png" alt="Strona 29 raportu">
+            <img src="media/vbox/vbox-30.png" alt="Strona 30 raportu">
+            <img src="media/vbox/vbox-31.png" alt="Strona 31 raportu">
+            <img src="media/vbox/vbox-32.png" alt="Strona 32 raportu">
+            <img src="media/vbox/vbox-33.png" alt="Strona 33 raportu">
+            <img src="media/vbox/vbox-34.png" alt="Strona 34 raportu">
+            <img src="media/vbox/vbox-35.png" alt="Strona 35 raportu">
+            <img src="media/vbox/vbox-36.png" alt="Strona 36 raportu">
+            <img src="media/vbox/vbox-37.png" alt="Strona 37 raportu">
+            <img src="media/vbox/vbox-38.png" alt="Strona 38 raportu">
+            <img src="media/vbox/vbox-39.png" alt="Strona 39 raportu">
+            <img src="media/vbox/vbox-40.png" alt="Strona 40 raportu">
+            <img src="media/vbox/vbox-41.png" alt="Strona 41 raportu">
+            <img src="media/vbox/vbox-42.png" alt="Strona 42 raportu">
+            <img src="media/vbox/vbox-43.png" alt="Strona 43 raportu">
+            <img src="media/vbox/vbox-44.png" alt="Strona 44 raportu">
+            <img src="media/vbox/vbox-45.png" alt="Strona 45 raportu">
+            <img src="media/vbox/vbox-46.png" alt="Strona 46 raportu">
+            <img src="media/vbox/vbox-47.png" alt="Strona 47 raportu">
+            <img src="media/vbox/vbox-48.png" alt="Strona 48 raportu">
+            <img src="media/vbox/vbox-49.png" alt="Strona 49 raportu">
+            <img src="media/vbox/vbox-50.png" alt="Strona 50 raportu">
+            <img src="media/vbox/vbox-51.png" alt="Strona 51 raportu">
+            <img src="media/vbox/vbox-52.png" alt="Strona 52 raportu">
+            <img src="media/vbox/vbox-53.png" alt="Strona 53 raportu">
+            <img src="media/vbox/vbox-54.png" alt="Strona 54 raportu">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Oliwia Witkowska. Wszystkie prawa zastrzeżone.</p>
+</footer>
+
+</body>
+</html>
