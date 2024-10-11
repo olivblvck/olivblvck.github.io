@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moje Portfolio</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Dodanie favicon -->
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
         /* * {
@@ -177,6 +177,12 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        .icon {
+            width: 1em;
+            height: auto;
+            vertical-align: middle;
+            /*margin-right: 5px; */
+        }
         /* Responsywność */
         @media (max-width: 600px) {
             .projects {
@@ -270,7 +276,13 @@
 
 <section id="contact">
     <h2>Kontakt</h2>
-    <p>Jeśli chcesz się ze mną skontaktować, napisz na <a href="mailto:witkowska.oliwia@vp.pl">witkowska.oliwia@vp.pl</a> lub znajdź mnie na <a href="https://linkedin.com/in/witkowska-oliwia">LinkedIn</a>.</p>
+    <p>Jeśli chcesz się ze mną skontaktować, napisz na
+        <img src="icons/email_icon.png" alt="Email" class="icon">
+        <a href="mailto:witkowska.oliwia@vp.pl"> witkowska.oliwia@vp.pl</a>
+        lub znajdź mnie na
+        <img src="icons/linkedin_icon.png" alt="LinkedIn" class="icon">
+        <a href="https://linkedin.com/in/witkowska-oliwia"> LinkedIn</a>.
+    </p>
 </section>
 
 <footer>
