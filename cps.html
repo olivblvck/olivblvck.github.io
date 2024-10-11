@@ -7,12 +7,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
         body {
-            font-family: 'Poppins', sans-serif; /* Czcionka Poppins Light */
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             background-color: #f9f4ef;
-            color: #333; /* Domyślny kolor tekstu */
+            color: #333;
         }
         header {
             background-color: #6d493b;
@@ -37,7 +37,7 @@
             transition: color 0.3s;
         }
         nav ul li a:hover {
-            color: #d1b3a3; /* Kolor po najechaniu */
+            color: #d1b3a3;
         }
         section {
             max-width: 900px;
@@ -81,10 +81,14 @@
         .project-content {
             text-align: center;
         }
+        .gist .blob-code-inner {
+            font-size: 12px !important;
+        }
+        div.highlight.highlight-source-shell{font-size: 12px;}
         footer {
             text-align: center;
             padding: 20px;
-            background: #6d493b; /* Kolor stopki */
+            background: #6d493b;
             color: #fff;
             position: relative;
             bottom: 0;
@@ -92,15 +96,12 @@
         }
 
         .iframe-video {
-            width: 560px;
-            height: 315px;
+            width: 100%;
+            max-width: 800px;
+            height: auto;
             margin: 20px 0;
         }
-        .iframe-pdf {
-            width: 560px;
-            height: 790px;
-            margin: 20px 0;
-        }
+
         .content-wrapper {
             max-width: 900px;
             margin: 20px auto;
@@ -124,13 +125,13 @@
             margin-top: 5px;
         }
         a {
-            color: #6d493b; /* Kolor linków */
+            color: #6d493b;
             text-decoration: none;
-            border-bottom: 1px solid transparent; /* Efekt podkreślenia */
+            border-bottom: 1px solid transparent;
             transition: border-color 0.3s;
         }
         a:hover {
-            border-bottom: 1px solid #6d493b; /* Efekt podkreślenia */
+            border-bottom: 1px solid #6d493b;
         }
         /* Responsywność */
         @media (max-width: 600px) {
@@ -139,8 +140,8 @@
                 align-items: center;
             }
             .project {
-                width: 100%; /* W pełnej szerokości na małych ekranach */
-                max-width: 300px; /* Maksymalna szerokość */
+                width: 100%;
+                max-width: 300px;
             }
         }
 
@@ -173,7 +174,7 @@
     <p>Program, który umożliwia analizę dźwięku i samodzielnie rozpoznaje wybrane tony zgodnie z postawionym zadaniem. Wczytany dźwięk powinien reprezentować jedną nutę, która jest rozpoznawana i wskazywana w tabeli nutowej. Program nie stosuje dokładnego porównania, tylko wskazuje nuty o częstotliwościach najbliższych pozyskanym. </p>
 
     <div class="project-content">
-        <iframe class="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/631OItFTg1k?si=Oe0f_c_34Ir8bNNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="iframe-video" src="https://www.youtube.com/embed/631OItFTg1k?si=Oe0f_c_34Ir8bNNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         <script src="https://gist.github.com/olivblvck/8feb67cc41e14975a82ee16f54346b00.js"></script>
     </div>
@@ -182,7 +183,7 @@
     <p>Program wskazujący, który przycisk domofonu został naciśnięty na podstawie analizy wydawanego przez niego dźwięku. Rozpoznawanie pojedynczego klawisza, którego wciśnięcie zostało nagrane. Rozpoznawanie sekwencji klawiszy na podstawie nagrania. </p>
 
     <div class="project-content">
-        <iframe class="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/kBLtSvVp_sE?si=lhVg2pXIN5L43qSN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="iframe-video" src="https://www.youtube.com/embed/kBLtSvVp_sE?si=lhVg2pXIN5L43qSN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         <script src="https://gist.github.com/olivblvck/b676215bc31c9603483ad6fffd84e408.js"></script>
     </div>
@@ -190,7 +191,7 @@
     <h3>Analiza spektralna dźwięku</h3>
     <p>Program, który umożliwia przeprowadzenie analizy spektralnej wczytanego dźwięku. Umożliwienie modyfikacji podstawowych cech zmieniających rozdzielczość wygenerowanego spektrogramu. Umożliwienie analizy sygnału z pomocą różnych funkcji okna. Możliwość nałożenia odpowiednich filtrów na analizowany sygnał.</p>
     <div class="project-content">
-        <iframe class="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/N2fuhC9sXiE?si=YXGgcJ0pviIDabZN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="iframe-video" src="https://www.youtube.com/embed/N2fuhC9sXiE?si=YXGgcJ0pviIDabZN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         <script src="https://gist.github.com/olivblvck/d4b603879bff636525073c855d0e662b.js"></script>
     </div>
